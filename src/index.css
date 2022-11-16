@@ -1,13 +1,351 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+ /* Navbar css */
+.navbar{
+    height: 10vh;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+.nav_icon{
+    margin-left: 1em;
+}
+.nav_title{
+    font-size: 2em;
+    margin-left: 0.4em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* INPUT DATA CSS */
+.main_input{
+    display: flex;
+    height: 25vh;
+    width: 30%;
+    flex-direction: column;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.title_input{
+    border: none;
+    height: 2em;
+    padding: 0.2em 0.8em;
+    font-weight: bold;
+    font-size: 1em;
+    outline: none;
+    margin-top: 0.4em;
+    border-bottom: 1px solid #d2cdcd;
+    font-family: 'Ubuntu', sans-serif;
+}
+.content_input{
+    border: none;
+    height: 7em;
+    border-radius: 1em;
+    padding: 0.6em 0.8em;
+    font-size: 1em;
+    outline: none;
+    margin-top: 0.4em;
+    font-family: 'Ubuntu', sans-serif;
+}
+.add_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 2em;
+    color: white;
+    transition: 0.5s;
+    width: 1.8em;
+    background: orange;
+    border-radius: 50%;
+    margin-left: 26em;
+    font-family: 'Ubuntu', sans-serif;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+.add_icon:hover{
+    transform: scale(1.1);
+    background-color: rgb(147, 227, 147);
+}
+
+/* SHOWiNPUT CSS */
+.show_input{
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+    width: 30%;
+    flex-direction: column;
+    border-radius: 1em;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.show_input span{
+    font-size: 1em;
+    margin-left: 0.6em;
+    color: #7e7e7e;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Home CSS */
+.home{
+    height: auto;
+    width: 100%;
+    margin-top: 2em;
+    font-family: 'Ubuntu', sans-serif;
+}
+.main{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home_cards{
+    align-items: left;
+}
+.notes_heading{
+    color: orange;
+    margin-bottom: 1em;
+    margin-left: 0.6em;
+}
+
+/* CARD CSS */
+.card_main_div{
+    height: 25vh;
+    margin-bottom: 2em;
+    margin-left: 6em;
+    border-radius: 1em;
+    width: 25%;
+    float: left;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.card_title{
+    height: 3em;
+    display: flex;
+    align-items: center;
+    border-radius: 1em;
+    padding-left: 0.8em;
+    font-weight: bold;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.card_content{
+    display: flex;
+    height: 6em;
+    border-radius: 1em;
+    padding-left: 0.8em;
+    font-weight: lighter;
+    color: #252525;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.delete_icon{
+    height: 2em;
+    display: flex;
+    width: 2em;
+    border-radius: 50%;
+    color: orange;
+    margin-left: 20em;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+}
+.delete_icon:hover{
+    background: orange;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* CARDS CSS */
+.cards{
+    height: auto;
+    width: auto;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 1430px) {
+  .add_icon {
+    margin-left: 22em;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .delete_icon{
+    margin-left: 16em;
+  }
+  .card_main_div{
+    height: 27vh;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .add_icon {
+    margin-left: 17em;
+  }
+  .card_main_div{
+        margin-left: 5em;
+  }
+}
+@media screen and (max-width: 1145px) {
+  .delete_icon{
+    margin-left: 14em;
+  }
+  .card_main_div{
+    height: 30vh;
+  }
+  .card_content{
+    height: 7em;
+  }
+  .main_input{
+    height: 30vh;
+  }
+}
+@media screen and (max-width: 1030px){
+.card_main_div {
+    margin-left: 4em;
+}
+}
+@media screen and (max-width: 882px){
+.card_main_div {
+    margin-left: 3.5em;
+}
+}
+@media screen and (max-width: 734px){
+.card_main_div {
+    margin-left: 3em;
+}
+}
+@media screen and (max-width: 600px){
+.card_main_div {
+    margin-left: 2.5em;
+}
+}
+
+@media screen and (max-width: 1010px){
+    .delete_icon{
+        margin-left: 11em;
+    }
+    .add_icon{
+            margin-left: 14em;
+    }
+}
+@media screen and (max-width: 835px){
+    .delete_icon{
+        margin-left: 9em;
+    }
+    .add_icon{
+            margin-left: 11em;
+    }
+}
+@media screen and (max-width: 668px){
+    .delete_icon{
+        margin-left: 7em;
+    }
+    .add_icon{
+            margin-left: 9em;
+    }
+}
+@media screen and (max-width: 576px){
+.card_main_div {
+    margin-left: 3em;
+        width: 40%;
+}
+.delete_icon {
+    margin-left: 10em;
+}
+.main_input{
+        width: 45%;
+}
+.add_icon {
+    margin-left: 11em;
+}
+}
+@media screen and (max-width: 475px){
+    .nav_title{
+        font-size: 1.5em;
+    }
+    .notes_heading{
+        text-align: center;
+    margin-top: 1em;
+    }
+    .card_main_div{
+        width: 50%;
+        height: 24vh;
+        margin-left: 8em;
+    }
+    .card_content{
+        height: 5em;
+    }
+    .delete_icon{
+        margin-left: 12em;
+    }
+}
+
+@media screen and (max-width: 442px){
+    .delete_icon{
+        margin-left: 11em;
+    }
+    .add_icon{
+            margin-left: 10em;
+    }
+    .card_main_div{
+        margin-left: 7em;
+    }
+    .navbar{
+            height: 7vh;
+    }
+}
+
+@media screen and (max-width: 408px){
+    .delete_icon{
+        margin-left: 10em;
+    }
+    .add_icon{
+            margin-left: 9em;
+    }
+    .card_main_div{
+        margin-left: 6.5em;
+    }
+    .nav_title {
+    font-size: 1.2em;
+}
+.notes_heading {
+    font-size: 1.2em;
+}
+.card_content {
+    font-size: 0.8em;
+}
+.card_title{
+    font-size: 1em;
+}
+}
+  
+
+
+@media screen and (max-width: 418px){
+    .main_input {
+    height: 24vh;
+}
+.card_main_div{
+        height: 19vh;
+}
+}
+
+@media screen and (max-width: 376px){
+    .main_input {
+    width: 50%;
+}
+.card_content {
+    height: 4em;
+}
+.delete_icon {
+    margin-left: 9em;
+}
 }
